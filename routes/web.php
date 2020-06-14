@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'ProductController@index');
+Route::post('/mysql', 'ProductController@insertToMySQL');
+Route::post('/mongo', 'ProductController@insertToMongo');
+Route::get('/edit/{id}/{type}', 'ProductController@formEdit');
+Route::put('/edit/{id}/{type}', 'ProductController@update');
+Route::delete('/mongo/{id}', 'ProductController@deleteMongo');
+Route::delete('/mysql/{id}', 'ProductController@deleteMySQL');

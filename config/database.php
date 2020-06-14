@@ -91,7 +91,6 @@ return [
             'prefix_indexes' => true,
         ],
 
-        //[.. Add mongodb connection  ..]
         'mongodb' => [
             'driver'   => 'mongodb',
             'host'     => env('MONGO_DB_HOST', 'localhost'),
